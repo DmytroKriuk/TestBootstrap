@@ -7,7 +7,8 @@ body {
 button {
   display: block;
   background: transparent;
-  border: none;
+  border: 0;
+  outline: 0 !important;
 }
 
 h1 {
@@ -23,6 +24,13 @@ h2 {
   font-weight: 600;
   color: #151515;
   font-size: 39px;
+}
+
+ul,
+li {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .btn {
@@ -149,6 +157,51 @@ h2 {
   letter-spacing: 0.3em;
   color: #8f8f8f;
   margin-bottom: 40px;
+}
+
+.services-top__list {
+  color: #8D8D8D;
+  margin-top: 67px;
+}
+
+.services-top__list_left {
+  margin-left: 37px;
+}
+
+.services-top__item {
+  margin-bottom: 20px;
+}
+
+.owl-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+}
+
+.owl-prev {
+  margin-right: 20px;
+}
+
+.owl-carousel {
+  margin-top: 100px;
+}
+
+.owl-item {
+  position: relative;
+}
+
+.owl-carousel__play {
+  cursor: pointer;
+  display: block;
+  background: url("../img/play.svg");
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -32px;
+  margin-top: -32px;
 }
 
 @media (min-width: 1200px) {

@@ -13,6 +13,7 @@ body {
     font-family: $fontFamily;
     color: #8D8D8D;
     font-size: 18px;
+    overflow-x:hidden;
 }
 
 
@@ -63,6 +64,7 @@ ul, li {
 
 .header-bgimage {
     position: static;
+    
 }
 
 .header {
@@ -83,10 +85,17 @@ ul, li {
 
     &__container {
         margin-bottom: 405px;
+        @media (max-width:992px) {
+            margin-bottom: 0px;
+        }
     }
 
     &__title {
-        
+        h1 {
+            @media (max-width:450px) {
+                font-size: 40px;
+            }
+        }
     }
 
     &__subtitle {
@@ -101,6 +110,13 @@ ul, li {
         position: absolute;
         top: 142px;
         right: 0;
+        @media (max-width:992px) {
+            width: 92%;
+            position: relative;
+            margin-top: -70px;
+            margin-bottom: 50px;
+            height: 640px;
+        }
     }
 
     &__video {
@@ -121,11 +137,24 @@ ul, li {
             width: 65px;
             height: 65px;
         }
+        @media (max-width: 1200px) {
+            bottom: 95px;
+        }
+        @media (max-width:992px) {
+            bottom: 133px;
+        }
+        @media (max-width:450px) {
+            width: inherit;
+        }
     }
 }
 
 .problems {
     padding-top: 155px;
+
+    &__image {
+        margin-bottom: 50px;
+    }
 
     &__container {
 
@@ -133,6 +162,11 @@ ul, li {
 
     &__title {
         padding-bottom: 20px;
+        &_mobile {
+            @media (max-width:768px) {
+                font-size: 26px;
+            }
+        }
     }
 
     &__subtitle {
@@ -184,7 +218,11 @@ ul, li {
     }
 
     &__title {
-
+        &_mobile {
+            @media (max-width:768px) {
+                font-size: 26px;
+            }
+        }
     }
 
     &__list {
@@ -192,6 +230,9 @@ ul, li {
         margin-top: 67px;
         &_left {
             margin-left: 20px;
+            @media (max-width:576px) {
+                margin-left: 0;
+            }
         }
     }
 
@@ -248,6 +289,13 @@ ul, li {
             bottom: 0;
             box-shadow: 30px 80px 130px rgba(0,0,0,0.25)
         }
+        @media (max-width: 769px) {
+            width: 100%;
+            position: relative;
+        }
+        @media (max-width: 420px) {
+            background: none;
+        }
     }
     &__container {
         padding-top: 38px;
@@ -260,6 +308,9 @@ ul, li {
 
     &__subtitle {
         padding: 10px 0px;
+    }
+    @media (max-width: 769px) {
+        padding-top: 100px;
     }
 }
 
@@ -311,12 +362,24 @@ ul, li {
         text-transform: uppercase;
         letter-spacing: 0.25em;
         margin-top: 40px;
+        @media (max-width:992px) {
+            margin-left: 0px;
+        }
+        @media (max-width:450px) {
+            flex-direction: column;
+        }
     }
 
     &__item {
         a {
         text-decoration: none;
         color: #8D8D8D;
+        }
+        @media (min-width:992px) {
+            margin-left: 0;
+        }
+        @media (max-width:450px) {
+            margin-bottom: 15px;
         }
     }
 
@@ -328,6 +391,9 @@ ul, li {
 
     &__images {
 
+    }
+    @media (max-width:992px) {
+        padding-top: 100px;
     }
 }
 
@@ -342,7 +408,11 @@ ul, li {
     }
 
     &__title {
-
+        &_mobile {
+            @media (max-width:768px) {
+                font-size: 26px;
+            }
+        }
     }
 }
 
@@ -352,6 +422,7 @@ ul, li {
     &__item {
         margin-bottom: 30px;
         position: relative;
+        width: 30%;
         &:hover img {
             box-shadow: -30px 80px 200px rgba(0,0,0,0.25);
             -moz-transform: scale(1.0) translate(0px, -20px);
@@ -373,12 +444,19 @@ ul, li {
             margin-left: -32px;
             margin-top: -32px;
         }
+        @media (max-width:576px) {
+            width: 100%;
+        }
+    }
+    @media (max-width:576px) {
+        margin-top: 50px;
     }
 }
 
 .works-wrap__item img {
     transition: all 1s ease;
     display: block;
+    width: 100%;
 }
 
 .tabs__content {
@@ -394,6 +472,12 @@ ul, li {
     &__photo {
         display: block;
     }
+    @media (max-width:992px) {
+        padding-top: 100px;
+    }
+    @media (max-width:576px) {
+        padding-top: 50px;
+    }
 }
 
 .testimonials-left {
@@ -403,14 +487,24 @@ ul, li {
         letter-spacing: 0.3em;
         color: #8f8f8f;
         margin-bottom: 70px;
+        @media (min-width:768px) {
+            margin-bottom: 30px;
+        }
     }
 
     &__title {
-
+        &_mobile {
+            @media (max-width:768px) {
+                font-size: 26px;
+            }
+        }
     }
 
     &__contributor {
         margin-top: 120px;
+        @media (max-width:992px) {
+            margin-top: 50px;
+        }
     }
 
    
@@ -428,8 +522,6 @@ ul, li {
     &__subtitle {
         font-weight: 400;
         font-size: 18px;
-        color: #222222;
-        opacity: 0.7;
     }
 }
 
@@ -437,4 +529,72 @@ ul, li {
     display: flex;
     margin-top: -50px;
     position: relative;
+    @media (max-width:992px) {
+        margin-top: 40px;
+    }
+}
+
+.clients {
+    padding-top: 278px;
+    @media (max-width:992px) {
+        padding-top: 80px;
+    }
+}
+
+.client-top {
+
+
+    &__title {
+         &_mobile {
+            @media (max-width: 992px) {
+                font-size: 26px;
+            }
+        }
+    }
+
+    &__container {
+
+    }
+}
+
+.worked-with {
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 0.3em;
+        color: #222222;
+        margin-bottom: 17px;
+    }
+
+    &__subtitle {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+.clients-row {
+    margin-top: 100px;
+    margin-bottom: 140px;
+    @media (max-width: 992px) {
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+    @media (max-width: 576px) {
+        flex-direction: column;
+    }
+    &__item {
+        @media (max-width: 576px) {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.footer {
+    height: 240px;
+    background: #515151;
+    display: flex;
+    align-items: center;
 }
